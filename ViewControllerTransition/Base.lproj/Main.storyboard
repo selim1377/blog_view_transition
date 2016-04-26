@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="BFN-ob-D5M">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="nnG-TJ-fvY">
+            <objects>
+                <navigationController id="BFN-ob-D5M" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hC4-EP-nR7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="RfK-af-uoq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JE0-gb-Tkb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-596" y="422"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2ev-pO-2Bm">
+                                <rect key="frame" x="99" y="92" width="121" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <state key="normal" title="Go to Fade..">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="openDestination:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5K7-ll-0lv"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="rxe-q5-iSx">
+                                <rect key="frame" x="43" y="499" width="235" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <state key="normal" title="Modal Presentation">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="modelPresentation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="peS-WT-FRR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="XOb-eM-6Ze">
+                                <rect key="frame" x="43" y="229" width="235" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <state key="normal" title="Pieces Presentation">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="piecesTransition:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4vm-y7-gBi"/>
+                                </connections>
+                            </button>
+                            <imageView hidden="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sparta" id="tdB-7J-6g4">
+                                <rect key="frame" x="20" y="254" width="100" height="142"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.31372549020000001" green="0.60784313729999995" blue="0.83529411760000005" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Aze-p5-6jl"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="imageView" destination="tdB-7J-6g4" id="8hs-7D-oD7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-223" y="422"/>
+        </scene>
+        <!--FadeViewController-->
+        <scene sceneID="fXm-ZN-wiX">
+            <objects>
+                <viewController storyboardIdentifier="fade" id="Eaf-qG-NSc" userLabel="FadeViewController" customClass="FadeViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NpS-yA-v00">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="5OL-dr-5Z5">
+                                <rect key="frame" x="-4" y="0.0" width="243" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ge7-y6-ibz">
+                                <rect key="frame" x="107" y="28" width="105" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <state key="normal" title="Dismiss">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismiss:" destination="Eaf-qG-NSc" eventType="touchUpInside" id="miz-X8-cLQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="io8-zv-pBQ"/>
+                    <connections>
+                        <outlet property="dismissAnimationController" destination="2cc-zd-bZB" id="IC8-cm-fDZ"/>
+                        <outlet property="presentAnimationController" destination="wkf-Uh-XDz" id="hAw-DU-oxj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MmF-D3-fHI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="wkf-Uh-XDz" userLabel="CubeTransition" customClass="CubeTransition"/>
+                <customObject id="2cc-zd-bZB" userLabel="FadeTransition" customClass="ScaleDownTransition"/>
+            </objects>
+            <point key="canvasLocation" x="153" y="422"/>
+        </scene>
+        <!--Double Tap View Controller-->
+        <scene sceneID="HIm-lI-pWu">
+            <objects>
+                <viewController storyboardIdentifier="modalPresentation" id="6SG-Jt-9FJ" customClass="DoubleTapViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4DH-Bt-ONv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Modal Presentation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PLa-P0-exo">
+                                <rect key="frame" x="55" y="40" width="211" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="dismissingTransitionDelegate" destination="jNb-dG-HBm" id="BfX-3A-woF"/>
+                        <outlet property="presentingTransitionDelegate" destination="AEY-gb-gc6" id="DO2-l0-fn7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yIE-CQ-k2r" sceneMemberID="firstResponder"/>
+                <customObject id="AEY-gb-gc6" customClass="CubeTransition">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="reverse">
+                            <integer key="value" value="0"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </customObject>
+                <customObject id="jNb-dG-HBm" customClass="CubeTransition">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="reverse">
+                            <integer key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="-223" y="1045"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="w3a-mZ-aWy">
+            <objects>
+                <viewController storyboardIdentifier="imageTransition" id="Hfy-gs-eoR" customClass="ProfileViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zPl-2U-j7G">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Image Transition" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kl0-tK-hLP">
+                                <rect key="frame" x="55" y="90" width="211" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sparta" id="RGg-oJ-hib">
+                                <rect key="frame" x="223" y="276" width="36" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="dismissingTransitionDelegate" destination="9wL-1D-UtR" id="lBc-AP-Mxt"/>
+                        <outlet property="profileImage" destination="RGg-oJ-hib" id="JID-Ru-Yi3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OMq-61-ip8" sceneMemberID="firstResponder"/>
+                <customObject id="Txe-GR-c4V" customClass="ImageTransition"/>
+                <customObject id="9wL-1D-UtR" customClass="CubeTransition">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="reverse">
+                            <integer key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="-596" y="1050"/>
+        </scene>
+        <!--PiecesViewController-->
+        <scene sceneID="WQO-Nq-3QY">
+            <objects>
+                <viewController storyboardIdentifier="piecesTransition" id="8ob-0I-vzU" userLabel="PiecesViewController" customClass="PiecesViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wVD-zq-6nQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" id="KTJ-3L-TbS">
+                                <rect key="frame" x="0.0" y="0.0" width="160" height="284"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.22352941179999999" green="0.67450980390000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" id="BNt-UV-P7H">
+                                <rect key="frame" x="160" y="0.0" width="160" height="284"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.99607843139999996" green="0.73333333329999995" blue="0.058823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" id="myu-OQ-cB3">
+                                <rect key="frame" x="0.0" y="284" width="160" height="284"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.81176470590000005" green="0.10980392160000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view userInteractionEnabled="NO" tag="4" contentMode="scaleToFill" id="eCW-VF-wcw">
+                                <rect key="frame" x="160" y="284" width="160" height="284"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.61253991789999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pieces Transition" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="v12-oM-aaI">
+                                <rect key="frame" x="55" y="40" width="211" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="NrE-Qn-btc">
+                                <rect key="frame" x="111" y="454" width="98" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="&lt;&lt; Dismiss">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismiss:" destination="8ob-0I-vzU" eventType="touchUpInside" id="NS1-Wu-Ioo"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="dismissingAnimationController" destination="XQV-XN-h8u" id="jZ5-tD-ym9"/>
+                        <outlet property="presentingAnimationController" destination="wMa-up-gNQ" id="rOu-BL-QSE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="feW-qy-BLj" sceneMemberID="firstResponder"/>
+                <customObject id="wMa-up-gNQ" userLabel="FadeTransition" customClass="FadeTransition"/>
+                <customObject id="XQV-XN-h8u" customClass="PiecesTransition"/>
+            </objects>
+            <point key="canvasLocation" x="171" y="1045"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="sparta" width="100" height="142"/>
+    </resources>
+</document>
